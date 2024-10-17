@@ -3,7 +3,7 @@ import { Seat } from './types';
 
 class SeatBookingSystem {
   private seats: Seat[] = [];
-  private premiumCost: number = 20;
+  private premiumCost: number = 40;
   
   constructor(totalSeats: number) {
     // Initialize seats with a mix of premium and regular
@@ -69,7 +69,7 @@ class SeatBookingSystem {
       return;
     }
 
-    let totalCost = 0;
+    let totalCost = 20;
     if (seat.isPremium) {
       totalCost += this.premiumCost;
     }

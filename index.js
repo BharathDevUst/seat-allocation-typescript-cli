@@ -40,7 +40,7 @@ var inquirer_1 = require("inquirer");
 var SeatBookingSystem = /** @class */ (function () {
     function SeatBookingSystem(totalSeats) {
         this.seats = [];
-        this.premiumCost = 20;
+        this.premiumCost = 40;
         // Initialize seats with a mix of premium and regular
         for (var i = 1; i <= totalSeats; i++) {
             this.seats.push({
@@ -115,7 +115,7 @@ var SeatBookingSystem = /** @class */ (function () {
                             console.log("Invalid seat selection.");
                             return [2 /*return*/];
                         }
-                        totalCost = 0;
+                        totalCost = 20;
                         if (seat.isPremium) {
                             totalCost += this.premiumCost;
                         }
